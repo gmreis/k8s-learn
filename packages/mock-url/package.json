@@ -1,10 +1,11 @@
 {
-  "name": "k8s-learn",
-  "private": true,
-  "description": "Repository used to my study about Kubernetes",
+  "name": "mock-url",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-      "dev:api": "npm run dev --prefix packages/api",
-      "dev:mock-url": "npm run dev --prefix packages/mock-url"
+    "start": "node app.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./app.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,10 @@
     "url": "https://github.com/gmreis/k8s-learn/issues"
   },
   "homepage": "https://github.com/gmreis/k8s-learn#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "nodemon": "^2.0.2"
   }
 }

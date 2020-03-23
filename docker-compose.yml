@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+    mock-url:
+        build:
+            context: ./packages/mock-url
+            args:
+                NODE_ENV: development
+        volumes:
+            - ./packages/mock-url:/usr/src/app
+        ports:
+            - 4567:4567
+        command: npm run dev
+
+    api:
+        build:
+            context: ./packages/api
+            args:
+                NODE_ENV: development
+        volumes:
+            - ./packages/api:/usr/src/app
+        ports:
+            - 3000:3000
+        command: npm run dev

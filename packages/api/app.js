@@ -1,8 +1,8 @@
 var express = require('express');
 
 const bodyParser = require('body-parser');
-const schemaValid = require('./schemaValid');
-const urlStatusValid = require('./urlStatusValid');
+const schemaValid = require('./src/schemaValid');
+const urlStatusValid = require('./src/urlStatusValid');
 
 const port = process.env.PORT || 3000;
 const app = express();

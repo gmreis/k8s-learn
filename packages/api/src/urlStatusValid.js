@@ -1,9 +1,9 @@
 const axios = require('axios');
 
 function checkUrlStatus(url) {
-  return axios.get(url)
+  return axios.get(url, { timeout: 2000 })
     .catch(error => error && error.response)
-    .then(response => response && response.status);
+    .then(response => response && response.status || 'timeout');
 }
 
 module.exports = function (req, res) {
